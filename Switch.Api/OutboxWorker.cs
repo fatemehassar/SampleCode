@@ -1,5 +1,4 @@
 ﻿using Switch.Api.Persistence;
-
 namespace Switch.Api
 {
     public class OutboxWorker : BackgroundService

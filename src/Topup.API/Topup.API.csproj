@@ -11,8 +11,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\src\Topup.Application\Topup.Application.csproj" />
-    <ProjectReference Include="..\src\Topup.Infrastructure\Topup.Infrastructure.csproj" />
+    <ProjectReference Include="..\Topup.Application\Topup.Application.csproj" />
+    <ProjectReference Include="..\Topup.Infrastructure\Topup.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>

@@ -3,23 +3,23 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.14.36623.8
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Topup.API", "Topup.API\Topup.API.csproj", "{7D4175C5-148D-4512-8D34-88A5A4946AD7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Topup.API", "src\Topup.API\Topup.API.csproj", "{7D4175C5-148D-4512-8D34-88A5A4946AD7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Topup.Application", "Topup.Application\Topup.Application.csproj", "{AD569FF8-AA94-4DEC-8CC1-9E11BBFE1748}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Topup.Application", "src\Topup.Application\Topup.Application.csproj", "{AD569FF8-AA94-4DEC-8CC1-9E11BBFE1748}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Topup.Domain", "Topup.Domain\Topup.Domain.csproj", "{9DA1A7B1-42F5-4C01-947A-2129AFA8205A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Topup.Domain", "src\Topup.Domain\Topup.Domain.csproj", "{9DA1A7B1-42F5-4C01-947A-2129AFA8205A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Topup.Infrastructure", "Topup.Infrastructure\Topup.Infrastructure.csproj", "{1E25FA52-6805-4A42-814A-0B73123FF3EC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Topup.Infrastructure", "src\Topup.Infrastructure\Topup.Infrastructure.csproj", "{1E25FA52-6805-4A42-814A-0B73123FF3EC}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{7116DD9A-19A6-4DF0-813E-7C3CB6E6FE38}"
 	ProjectSection(SolutionItems) = preProject
-		Switch.Api\docs\document.pdf = Switch.Api\docs\document.pdf
-		Switch.Api\docs\Flow.txt = Switch.Api\docs\Flow.txt
-		Switch.Api\docs\sadad_architecture_diagram.png = Switch.Api\docs\sadad_architecture_diagram.png
-		Switch.Api\docs\sequence.png = Switch.Api\docs\sequence.png
-		Switch.Api\docs\مستند فنی پیاده سازی.docx = Switch.Api\docs\مستند فنی پیاده سازی.docx
+		docs\document.pdf = docs\document.pdf
+		docs\Flow.txt = docs\Flow.txt
+		docs\sadad_architecture_diagram.png = docs\sadad_architecture_diagram.png
+		docs\sequence.png = docs\sequence.png
+		docs\مستند فنی پیاده سازی.docx = docs\مستند فنی پیاده سازی.docx
 	EndProjectSection
 EndProject
 Global

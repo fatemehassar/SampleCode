@@ -1,6 +1,6 @@
 # Switch.Api
 ## Architecture
-![Architecture](docs/architecture.png)
+![Architecture](docs/sadad_architecture_diagram.png)
 
 ## Sequence Diagram
 ![Sequence](docs/sequence.png)

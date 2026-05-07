@@ -1,3 +1,5 @@
+using Topup.Application.Features.Purchase.Command;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -15,6 +17,12 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
+builder.Services.AddMediatR(cfg =>
+{
+    cfg.RegisterServicesFromAssembly(
+        typeof(PurchaseCommand).Assembly);
+});
 
 app.UseHttpsRedirection();
 

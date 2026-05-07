@@ -16,7 +16,12 @@
     <Folder Include="Polly\" />
     <Folder Include="Services\" />
     <Folder Include="Queue\" />
-    <Folder Include="Persistence\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Microsoft.EntityFrameworkCore">
+      <HintPath>F:\nugetCache\.nuget\microsoft.entityframeworkcore\8.0.26\lib\net8.0\Microsoft.EntityFrameworkCore.dll</HintPath>
+    </Reference>
   </ItemGroup>
 
 </Project>

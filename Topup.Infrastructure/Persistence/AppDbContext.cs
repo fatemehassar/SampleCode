@@ -1,10 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Topup.Application.Interfaces;
+using Topup.Domain.Entities;
 
 namespace Topup.Infrastructure.Persistence
 {
@@ -12,5 +8,10 @@ namespace Topup.Infrastructure.Persistence
      : DbContext,
        IApplicationDbContext
     {
+        public DbSet<Transaction> Transactions => throw new NotImplementedException();
+
+        public DbSet<OutboxMessage> Outbox => throw new NotImplementedException();
+
+        public DbSet<TopupSaga> Sagas => throw new NotImplementedException();
     }
 }

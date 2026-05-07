@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Transactions;
+using Topup.Domain.Enums;
+
 
 namespace Topup.Domain.Entities
 {

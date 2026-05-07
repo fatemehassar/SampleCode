@@ -1,4 +1,6 @@
-﻿using Switch.Api.Enums;
+﻿using Polly.CircuitBreaker;
+using Switch.Api.Enums;
+using Switch.Api.ExceptionHandeling;
 using Switch.Api.Models;
 using Switch.Api.Persistence;
 using Switch.Api.Services;
@@ -8,15 +10,18 @@ public class TopupSagaOrchestrator
     private readonly AppDbContext _db;
     private readonly MciClient _mci;
     private readonly SwitchService _switch;
+    private readonly ILogger<GlobalExceptionMiddleware> _logger;
 
     public TopupSagaOrchestrator(
         AppDbContext db,
         MciClient mci,
-        SwitchService @switch)
+        SwitchService @switch,
+        ILogger<GlobalExceptionMiddleware> logger)
     {
         _db = db;
         _mci = mci;
         _switch = @switch;
+        _logger = logger;
     }
 
     public async Task ExecuteAsync(Transaction tx)
@@ -41,18 +46,35 @@ public class TopupSagaOrchestrator
 
         try
         {
+            _logger.LogInformation(
+                            "Topup Started | TxId:{TxId}",
+                            tx.Id);
             topupSuccess =
                 await _mci.TopupAsync(
                     tx.MobileNo,
                     tx.Amount);
         }
-        catch
+        catch (BrokenCircuitException ex)
         {
+            _logger.LogError(ex,
+                "Circuit Breaker Open");
+
+            topupSuccess = false;
+        }
+        catch (Exception ex)
+        {
+            _logger.LogError(ex,
+                "Unexpected MCI Error");
+
             topupSuccess = false;
         }
 
         if (topupSuccess)
         {
+            _logger.LogInformation(
+                        "Topup Success | TxId:{TxId}",
+                        tx.Id);
+
             saga.State = SagaState.TopupCompleted;
 
             await _switch.AdviceAsync(tx.Id);
@@ -63,6 +85,10 @@ public class TopupSagaOrchestrator
         }
         else
         {
+            _logger.LogWarning(
+                        "Reverse Executed | TxId:{TxId}",
+                        tx.Id);
+
             await _switch.ReverseAsync(tx.Id);
 
             saga.State = SagaState.ReverseCompleted;

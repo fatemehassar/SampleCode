@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using Switch.Api;
+using Switch.Api.ExceptionHandeling;
 using Switch.Api.Persistence;
 using Switch.Api.Services;
 
@@ -33,6 +34,11 @@ builder.Services.AddHostedService<
     TopupWorker>();
 
 var app = builder.Build();
+
+
+app.UseMiddleware<CorrelationIdMiddleware>();
+
+app.UseMiddleware<GlobalExceptionMiddleware>();
 
 app.UseSwagger();
 

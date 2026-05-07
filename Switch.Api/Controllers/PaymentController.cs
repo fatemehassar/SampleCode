@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Switch.Api.Enums;
+using Switch.Api.ExceptionHandeling;
 using Switch.Api.Models;
 using Switch.Api.Persistence;
 
@@ -21,6 +22,11 @@ public class PaymentController : ControllerBase
         string mobileNo,
         string key)
     {
+        if (amount <= 0)
+        {
+            throw new BusinessException(
+                "Amount must be greater than zero");
+        }
         var exists = await _db.Transactions
             .FirstOrDefaultAsync(
                 x => x.IdempotencyKey == key);

@@ -1,0 +1,22 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Topup.Application\Topup.Application.csproj" />
+    <ProjectReference Include="..\Topup.Domain\Topup.Domain.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Workers\" />
+    <Folder Include="Polly\" />
+    <Folder Include="Services\" />
+    <Folder Include="Queue\" />
+    <Folder Include="Persistence\" />
+  </ItemGroup>
+
+</Project>

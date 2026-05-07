@@ -30,8 +30,7 @@ namespace Switch.Api.Services
 
                 var orchestrator =
                     scope.ServiceProvider
-                    .GetRequiredService<
-                        TopupSagaOrchestrator>();
+                    .GetRequiredService<TopupSagaOrchestrator>();
 
                 var tx = await db.Transactions
                     .FindAsync(Guid.Parse(msg));

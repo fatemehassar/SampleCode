@@ -15,10 +15,12 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{02EA681E-C7D
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{7116DD9A-19A6-4DF0-813E-7C3CB6E6FE38}"
 	ProjectSection(SolutionItems) = preProject
+		docs\CleanArchitecture_topup.png = docs\CleanArchitecture_topup.png
 		docs\document.pdf = docs\document.pdf
 		docs\Flow.txt = docs\Flow.txt
 		docs\sadad_architecture_diagram.png = docs\sadad_architecture_diagram.png
 		docs\sequence.png = docs\sequence.png
+		docs\SequenceDiagram_Topup.png = docs\SequenceDiagram_Topup.png
 		docs\مستند فنی پیاده سازی.docx = docs\مستند فنی پیاده سازی.docx
 	EndProjectSection
 EndProject

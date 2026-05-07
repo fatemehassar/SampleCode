@@ -1,3 +1,9 @@
+## Architecture
+![Architecture](docs/CleanArchitecture_topup.png)
+
+## Sequence
+![Architecture](docs/SequenceDiagram_Topup.png)
+
 ## Sequence
 ![Architecture](docs/sequence.png)
 

@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36623.8
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Switch.Api", "Switch.Api\Switch.Api.csproj", "{9F01C788-29CE-4882-9389-C3DCD934D0D3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9F01C788-29CE-4882-9389-C3DCD934D0D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9F01C788-29CE-4882-9389-C3DCD934D0D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9F01C788-29CE-4882-9389-C3DCD934D0D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9F01C788-29CE-4882-9389-C3DCD934D0D3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A56626E3-FAF3-4BCE-AEE6-374B7F2CF426}
+	EndGlobalSection
+EndGlobal

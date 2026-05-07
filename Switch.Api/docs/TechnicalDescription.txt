@@ -1,0 +1,12 @@
+﻿Purchase
+   ↓
+Outbox
+   ↓
+Queue
+   ↓
+Saga Orchestrator
+   ↓
+MCI Retry + CircuitBreaker
+   ↓
+Success → Advice
+Failure → Reverse

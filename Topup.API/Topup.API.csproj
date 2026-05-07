@@ -15,8 +15,4 @@
     <ProjectReference Include="..\Topup.Infrastructure\Topup.Infrastructure.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Middleware\" />
-  </ItemGroup>
-
 </Project>

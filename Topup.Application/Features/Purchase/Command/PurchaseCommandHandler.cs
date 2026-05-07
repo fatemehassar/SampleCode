@@ -1,10 +1,8 @@
 ﻿using MediatR;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Transactions;
+using Topup.Application.Interfaces;
+using Topup.Domain.Entities;
+using Topup.Domain.Exceptions;
+using Transaction = Topup.Domain.Entities.Transaction;
 
 namespace Topup.Application.Features.Purchase.Command
 {
@@ -23,6 +21,11 @@ namespace Topup.Application.Features.Purchase.Command
             PurchaseCommand request,
             CancellationToken cancellationToken)
         {
+            if (request.Amount <= 0)
+            {
+                throw new BusinessException(
+                    "Amount must be greater than zero");
+            }
             var exists = _db.Transactions
                 .FirstOrDefault(x =>
                     x.IdempotencyKey ==

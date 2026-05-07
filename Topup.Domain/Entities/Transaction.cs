@@ -58,5 +58,10 @@ namespace Topup.Domain.Entities
         {
             Status = TransactionStatus.TopupProcessing;
         }
+
+        public void MarkFailed()
+        {
+            Status = TransactionStatus.Failed;
+        }
     }
 }

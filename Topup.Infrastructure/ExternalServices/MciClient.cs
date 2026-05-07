@@ -1,9 +1,10 @@
 ﻿using Polly;
 using Polly.Wrap;
+using Topup.Application.Interfaces;
 
 namespace Topup.Infrastructure.ExternalServices
 {
-    public class MciClient
+    public class MciClient : IMciClient
     {
         private readonly AsyncPolicyWrap<bool> _policy;
 

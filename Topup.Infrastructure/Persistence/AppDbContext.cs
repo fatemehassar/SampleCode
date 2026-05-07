@@ -4,14 +4,14 @@ using Topup.Domain.Entities;
 
 namespace Topup.Infrastructure.Persistence
 {
-    public class AppDbContext
-     : DbContext,
-       IApplicationDbContext
+    public class AppDbContext : DbContext, IApplicationDbContext    
     {
-        public DbSet<Transaction> Transactions => throw new NotImplementedException();
+        public AppDbContext(DbContextOptions options) : base(options) { }
 
-        public DbSet<OutboxMessage> Outbox => throw new NotImplementedException();
+        public DbSet<Transaction> Transactions => Set<Transaction>();
 
-        public DbSet<TopupSaga> Sagas => throw new NotImplementedException();
+        public DbSet<TopupSaga> Sagas => Set<TopupSaga>();
+        public DbSet<OutboxMessage> Outbox => Set<OutboxMessage>();
     }
 }
+ 
